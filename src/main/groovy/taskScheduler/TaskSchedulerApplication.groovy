@@ -30,8 +30,8 @@ class TaskSchedulerApplication {
 
     @RequestMapping("/status")
     @ResponseBody
-    String status(task) {
-        return 'status'
+    String status(String task) {
+        return 'task: ' + task + 'abc'
     }
 
 	static void main(String[] args) throws Exception {
