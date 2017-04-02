@@ -25,7 +25,6 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
 
 version = '1.0.0-SNAPSHOT'
-//noinspection GroovyUnusedAssignment
 sourceCompatibility = 1.8
 
 repositories {

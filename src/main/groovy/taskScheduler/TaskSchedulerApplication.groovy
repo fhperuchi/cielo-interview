@@ -19,19 +19,19 @@ class TaskSchedulerApplication {
     @RequestMapping("/schedule")
     @ResponseBody
     String schedule(dockerImage, dateTime, envVars) {
-        return 'agendado!'
+        return 'schedule'
     }
 
     @RequestMapping("/list")
     @ResponseBody
     String list() {
-        return 'lista!'
+        return 'list'
     }
 
     @RequestMapping("/status")
     @ResponseBody
     String status(String task) {
-        return 'task: ' + task + 'abc'
+        return 'task: ' + task
     }
 
 	static void main(String[] args) throws Exception {
