@@ -6,20 +6,21 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.ResponseBody
 import org.springframework.web.bind.annotation.RestController
 
+
 @RestController
 @EnableAutoConfiguration
 class TaskSchedulerApplication {
 
 	@RequestMapping("/")
-	@ResponseBody
+	@ResponseBody()
 	String home() {
-		return "Task Scheduler App"
+		return 'Task Scheduler App Home'
 	}
 
     @RequestMapping("/schedule")
     @ResponseBody
-    String schedule(dockerImage, dateTime, envVars) {
-        return 'schedule'
+    String schedule(String dockerImage, String dateTime, String envVars) {
+        return "schedule: $dockerImage | $dateTime | $envVars"
     }
 
     @RequestMapping("/list")
@@ -30,11 +31,11 @@ class TaskSchedulerApplication {
 
     @RequestMapping("/status")
     @ResponseBody
-    String status(String task) {
-        return 'task: ' + task
+    String status(task) {
+        return 'task: ' + task + 'asdasdsa'
     }
 
-	static void main(String[] args) throws Exception {
+	static void main(String[] args) {
 		SpringApplication.run(TaskSchedulerApplication.class, args)
 	}
 }
