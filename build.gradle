@@ -36,13 +36,13 @@ configurations {
 }
 
 dependencies {
-	compile('org.codehaus.groovy:groovy')
-	runtime('org.postgresql:postgresql')
-	compile('org.springframework.boot:spring-boot-starter-jersey')
-	compile('org.springframework.boot:spring-boot-starter-web')
+	compile 'org.codehaus.groovy:groovy'
+	runtime 'org.postgresql:postgresql'
+	compile 'org.springframework.boot:spring-boot-starter-jersey'
+	compile 'org.springframework.boot:spring-boot-starter-web'
 	compile 'com.amazonaws:aws-java-sdk'
-	runtime('org.springframework.boot:spring-boot-devtools')
-	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+	runtime 'org.springframework.boot:spring-boot-devtools'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testCompile 'org.springframework.boot:spring-boot-starter-test'
 //	compile('org.springframework.session:spring-session')
 }
