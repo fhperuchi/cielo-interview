@@ -5,7 +5,7 @@ EC2 Spot Instances quando o trabalho for finalizado.
 
 As operações que deverão ser implementadas em sua API são:
  - schedule: Dado uma imagem de Docker, data e horário desejados e uma lista de variáveis de ambiente, agende o provisionamento da EC2 Spot Instance
-   e o deploy de uma imagem de Docker dentro do host no horário agendado.
+   e o deploy de uma imagem de Docker dentro do host (instancia Spot) no horário agendado.
  - list: Listar as atividades agendadas
  - status: Apresentar o estado de uma determinada atividade
  - callback: Será chamada pela aplicação agendada quando a atividade executada for finalizada.
