@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody
 import org.springframework.web.bind.annotation.RestController
 
 import javax.servlet.http.HttpServletRequest
+import java.text.SimpleDateFormat
 
 @RestController
 @EnableAutoConfiguration
@@ -16,6 +17,8 @@ class TaskSchedulerApplication {
 
     @Autowired
     private HttpServletRequest request
+
+    def sdf = new SimpleDateFormat('dd-MM-yyyy-HH-mm-ss')
 
 	@RequestMapping("/")
 	@ResponseBody()
@@ -37,7 +40,7 @@ class TaskSchedulerApplication {
         task.envVars = envVars
         lista << task
         request.getSession().setAttribute('taskList', lista)
-
+        AwsUtils.createSpotInstance(sdf.parse(dateTime))
         return "schedule: $dockerImage | $dateTime | $envVars"
     }
 
