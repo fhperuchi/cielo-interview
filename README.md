@@ -25,3 +25,6 @@ Também será avaliado um arquivo README.md explicando a solução implementada 
 
 Fique a vontade para entrar em contato caso tenha dúvidas. Nos avise caso ache que o tempo determinado não seja suficiente.
 Prazo de implementação: 2 semanas
+
+
+docker build -t executor:1.0 .
