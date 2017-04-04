@@ -28,3 +28,4 @@ Prazo de implementação: 2 semanas
 
 
 docker build -t executor:1.0 .
+docker run -it --name teste executor:1.0
